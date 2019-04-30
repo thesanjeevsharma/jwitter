@@ -1,0 +1,32 @@
+<div @slideIn class="container">
+  <div class="my-jweets">
+    <div class="heading">
+      <h1>My Jweets</h1>
+    </div>
+    <div class="jweets">
+      <div @fade class="jweet" *ngFor="let jweet of jweets">
+        <div class="jweet-body">
+          {{ jweet.body }}
+        </div>
+        <div class="jweet-author">
+          by <span>@{{ jweet.author.username }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="my-mentions">
+    <div class="heading">
+      <h1>My Mentions</h1>
+    </div>
+    <div class="jweets">
+      <div @fade class="jweet" *ngFor="let jweet of mentions">
+        <div class="jweet-body">
+          {{ jweet.body }}
+        </div>
+        <div class="jweet-author">
+          by <span>@{{ jweet.author.username }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

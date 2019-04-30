@@ -1,0 +1,20 @@
+<div class="full">
+<div @slideIn class="register-panel">
+  <div class="text">
+    <h1>Join us today!</h1>
+    <p>1,000,000+ montly active users are waiting for you.</p>
+  </div>
+  <form [formGroup]="registerForm" (submit)="onRegister()">
+    <div class="input-group">
+      <small *ngIf="usernameTaken">Sorry! Username already taken.</small>      
+      <label for="username">Username</label>
+      <input type="text" formControlName="username" (input)="checkUsername()">
+    </div>
+    <div class="input-group">
+      <label for="password">Password</label>
+      <input type="password" formControlName="password">
+    </div>
+    <button type="submit" class="btn" [disabled]="registerForm.invalid">Register</button>
+  </form>
+</div>
+</div>

@@ -1,0 +1,19 @@
+<div class="full">
+  <div @slideIn class="login-panel">
+    <div class="text">
+      <h1>Welcome Back!</h1>
+      <p>Please login using your jwitter credentials.</p>
+    </div>
+    <form [formGroup]="loginForm" (submit)="onLogin()">
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" formControlName="username">
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" formControlName="password">
+      </div>
+      <button type="submit" class="btn" [disabled]="loginForm.invalid">Login</button>
+    </form>
+  </div>
+</div>

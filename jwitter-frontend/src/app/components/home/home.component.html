@@ -1,0 +1,32 @@
+<div @slideIn class="container">
+<div class="write-jweet-panel">
+  <form [formGroup]="jweetForm" (submit)="onJweet()">
+    <div class="input-group">
+      <label for="jweet">Got something on your mind? Jweet it!</label>
+      <textarea formControlName="body" cols="30" rows="5" id="jweet" (input)="autoGrow($event)"></textarea>
+      <small> <span id="jweetLength">0</span>/1024</small>
+    </div>
+    <div class="mentions" *ngIf="mentions">
+      <ul>
+        <li (click)="mentioned( mention.username )" *ngFor="let mention of mentions">{{ mention.username }}</li>
+      </ul>
+    </div>
+    <button type="submit" class="btn" [disabled]="jweetForm.invalid">Jweet</button>
+  </form>
+</div>
+<div class="jweets-panel"> 
+  <div class="text">
+    <h1>Jweets from others!</h1>
+  </div>
+  <div class="jweets">
+    <div @fade class="jweet" *ngFor="let jweet of jweets">
+      <div class="jweet-body">
+        {{ jweet.body }}
+      </div>
+      <div class="jweet-author">
+        by <span>@{{ jweet.author.username }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

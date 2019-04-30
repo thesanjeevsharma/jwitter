@@ -1,0 +1,46 @@
+nav {
+    padding: 0 50px;
+    background: #fff;
+    width: 100%;   
+
+    .brand-name {
+        width: 30%;
+        float: left;    
+        padding: 20px 0;
+        color : #172578;
+
+        h1 {
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .navbar  {
+        width: 70%;
+        float: left;
+        
+        ul {
+            float: right;
+            padding: 20px 0;
+            clear: right;
+            
+            li {
+                float: left;
+                list-style-type: none;
+                margin: 0 20px;
+
+                a {
+                    text-decoration: none;
+                    color: #666;
+
+                    &:hover{
+                        cursor: pointer;
+                        color: #172578;
+                    }
+                }
+            }
+        }
+    }
+}

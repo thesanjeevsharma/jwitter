@@ -1,0 +1,38 @@
+.container {
+    float: left;
+    width: 100%;
+    padding: 50px;
+
+    .my-mentions, .my-jweets {
+        width: 45%;
+        float: left;
+    }
+
+    .my-jweets {
+        margin-right: 10%;    
+    }
+
+    .jweets {
+        .jweet {
+            padding: 10px;
+            border: 1px solid #1aec98;
+            border-radius: 5px;
+            margin: 10px 0;
+
+            .jweet-body {
+                font-size: 1.1rem;
+                font-family: 'Oswald', sans-serif;
+                color: #444;            
+            }
+
+            .jweet-author {
+                font-size: 0.9rem;
+                
+                span{
+                    color: #172578;
+                }
+            }
+        }
+    }
+
+}

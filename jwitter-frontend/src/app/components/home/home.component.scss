@@ -1,0 +1,99 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+
+    .write-jweet-panel {
+        border-radius: 5px;
+        box-shadow: 0 0 15px 2px #ccc;
+        margin-top: 50px;
+        padding: 20px;
+
+        label, textarea {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        textarea {
+            font-size: 1.2rem;
+            border-radius: 5px;
+            font-family: 'Oswald', sans-serif;
+            color: #444;
+            outline: none;
+        }
+
+        small {
+            float: right;
+            color: #666;
+        }
+
+        .mentions {
+            ul {
+                list-style-type: none;
+                width: 30%;
+
+                li {
+                    background: hsla(231, 68%, 28%, 0.4);
+                    color: #fff;
+                    padding: 5px;
+                    margin-bottom: 2px;
+
+                    &:hover {
+                        cursor: pointer;
+                        background: hsla(231, 68%, 28%, 0.6);
+                    }
+                }
+            }
+        }
+
+        .btn {
+            padding: 15px;
+            text-transform: uppercase;
+            border: none;
+            background: #1aec98;
+            color: #fff;
+            cursor: pointer;
+
+            &:disabled {
+                background: #666;
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    .jweets-panel {
+        margin-top: 50px;
+        
+        .text {
+            color: #ccc;
+        }
+
+        .jweets {
+            .jweet {
+                padding: 10px;
+                border: 1px solid #1aec98;
+                border-radius: 5px;
+                margin: 10px 0;
+
+                .jweet-body {
+                    font-size: 1.1rem;
+                    font-family: 'Oswald', sans-serif;
+                    color: #444;            
+                }
+
+                .jweet-author {
+                    font-size: 0.9rem;
+                    
+                    span{
+                        color: #172578;
+                    }
+                }
+            }
+        }
+    }
+}
