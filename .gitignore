@@ -1,3 +1,5 @@
-node_modules
+.env
+
+/node_modules
 
 jwitter-frontend/node_modules
